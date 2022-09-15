@@ -1,0 +1,83 @@
+public class ControlStatements {
+
+    public static void main(String[] args) {
+
+        for(int counter = 0; counter < 10; counter++){
+            if (counter % 2 == 0)
+                continue;
+            System.out.println("Main : " + counter);
+        }
+
+        while(true) {
+            System.out.println("printing.......");
+            break;
+        }
+        int counter = 100;
+        do{
+            
+        }while(counter > 10);
+    }
+}
+
+public class Main {
+    static String name = "CCPROG3";
+
+
+
+    static int number = 23;
+
+    static double decimal = 0.0;
+
+    static char character = 'c';
+
+    static boolean truth = false;
+
+    static long money = 1_000_000_000_000L;
+
+    static float grade = 0.0F;
+
+    static short amount = 9_000;
+
+    static byte binaryData = 70;
+
+
+    public static void main(String[] args) {
+        String variable = "value";
+
+        System.out.println(name);
+
+        number = 1 + 2;
+
+        int result = add(1,1);
+
+        int remainder = 10 % 4;
+
+        System.out.println("Remainder: " + remainder);
+    }
+
+    static int add(int value1, int value2) {
+        return value1 + value2;
+    }
+
+    static long add(long value1, long value2) {
+        return value1 + value2;
+    }
+
+    static double add(float value1, double value2) {
+        return value1 + value2;
+    }
+
+    static double add(double value1, float value2) {
+        return value1 + value2;
+    }
+
+    static void doSomething(){
+        return;
+        //System.out.println("Do Something");
+    }
+    //single
+    /*
+    multi
+     */
+
+}
