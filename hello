@@ -1,83 +1,149 @@
-public class ControlStatements {
-
-    public static void main(String[] args) {
-
-        for(int counter = 0; counter < 10; counter++){
-            if (counter % 2 == 0)
-                continue;
-            System.out.println("Main : " + counter);
-        }
-
-        while(true) {
-            System.out.println("printing.......");
-            break;
-        }
-        int counter = 100;
-        do{
-            
-        }while(counter > 10);
-    }
-}
+import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class Main {
+
+    public static void main(String[] args) {
+        /*
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter your name: ");
+        String userName = input.nextLine();
+        System.out.println("Name : " + userName);
+
+        System.out.println("Enter your number: ");
+        int userInputNumber = input.nextInt();
+
+        System.out.println("Enter your bill cost: ");
+        float userAmount = input.nextFloat();
+
+        int number = Integer.parseInt(input.nextLine());
+        float floatNumber = Float.parseFloat(input.nextLine());
+
+        String value = "";
+        String something = 123 + "";
+
+        BigDecimal amount = new BigDecimal("123.123"); // used for monetary value
+
+        System.out.print("Enter something: ");
+        Object userName = input.nextInt();
+        System.out.println("Data type : " + userName.getClass().getSimpleName());
+
+        */
+
+        getUserInfo();
+        getUserInfoWithErrorHandling();
+        getUserInputWithLoop();
+    }
+
+    static void getUserInfo(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        String userName = input.nextLine();
+        System.out.println("Name : " + userName);
+    }
+
+    static void getUserInfoWithErrorHandling(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int number = 0;
+
+        try {
+             number = input.nextInt();
+        }catch(Exception e) {
+            System.out.println("Error : " + e);
+        }
+
+
+        System.out.println("Number : " + number);
+    }
+
+    static void getUserInputWithLoop(){
+        Scanner input = new Scanner(System.in);
+        String strContinue = "y";
+        do {
+            System.out.println("Enter an integer: ");
+            int number = input.nextInt();
+
+            System.out.println("\nDo you want to enter another integer? " + "\nPlease input y/Y to add another integer.");
+            strContinue = input.next();
+
+        }while(strContinue.equals("Y") || strContinue.equals("y"));
+    }
+}
+class Main{
+
+    // Data Types
     static String name = "CCPROG3";
-
-
-
     static int number = 23;
-
     static double decimal = 0.0;
-
     static char character = 'c';
-
     static boolean truth = false;
-
     static long money = 1_000_000_000_000L;
-
     static float grade = 0.0F;
-
     static short amount = 9_000;
+    static byte binaryData = 90;
 
-    static byte binaryData = 70;
+    // Objects
+    static Integer numberObj = 23;
+    static Double decimalObj = 0.0;
+    static Character characterObj = 'c';
+    static Boolean truthObj = false;
+    static Long moneyObj = 1_000_000_000_000L;
+    static Float gradeObj = 0.0F;
+    static Short amountObj = 9_000;
+    static Byte binaryDataObj = 90;
 
+    // You can add underscores between numbers to separate them
 
     public static void main(String[] args) {
         String variable = "value";
 
         System.out.println(name);
-
-        number = 1 + 2;
-
-        int result = add(1,1);
-
-        int remainder = 10 % 4;
-
-        System.out.println("Remainder: " + remainder);
     }
 
-    static int add(int value1, int value2) {
+    static int add(int value1, int value2){
         return value1 + value2;
     }
 
-    static long add(long value1, long value2) {
+    static long add(long value1, long value2){
         return value1 + value2;
     }
 
-    static double add(float value1, double value2) {
+    static double add(float value1, double value2){
         return value1 + value2;
     }
 
-    static double add(double value1, float value2) {
+    static double add(double value1, float value2){
         return value1 + value2;
     }
 
     static void doSomething(){
+        System.out.println("Do Something");
         return;
-        //System.out.println("Do Something");
     }
-    //single
-    /*
-    multi
-     */
+}
 
+public class ControlStatements {
+
+    public static void main(String[] args) {
+        
+        for(int counter = 0; counter < 3; counter++){
+            System.out.println("Main before continue : " + counter);
+            if(counter % 2 == 0)
+                continue; // Skips current iteration of the loop without executing the code below it
+            System.out.println("Main : " + counter);
+
+        }
+
+        while (true){
+            System.out.println("printing...");
+            break;
+        }
+
+        int counter = 100;
+        do {
+
+        }while(counter > 10);
+    }
 }
